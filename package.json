@@ -42,6 +42,7 @@
     "babel-runtime": "^5.8.24",
     "normalize.css": "^3.0.3",
     "react": "0.14.0-rc1",
+    "react-dnd": "^1.1.8",
     "react-dom": "0.14.0-rc1"
   }
 }

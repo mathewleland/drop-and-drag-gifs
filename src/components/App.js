@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
+import { DragDropContext } from 'react-dnd';
+import HTML5Backend from 'react-dnd/modules/backends/HTML5';
+
 import urls from '../constants/urls';
+import GifSwatch from './GifSwatch';
+import GifDropzone from './GifDropzone';
+import mockResponse from '../constants/mockResponse';
+
 import './App.scss';
 
+@DragDropContext(HTML5Backend)
 export class App extends Component {
+
+  renderSwatch(r) {
+    const props = {
+      key: r.id,
+      id: r.id,
+      thumbnailUrl: r.images.fixed_height_small_still.url,
+    };
+    return (<GifSwatch {...props} />);
+  }
+
   render() {
     let logoUrl = require('../../static/images/logo.svg');
-    let results = [{ label: "Foo" }, { label: "Bar" }];
+
+    // TODO connect results to search box and giphy API
+    let resultSwatches = mockResponse.data.map(::this.renderSwatch);
     return (
       <div className="App">
         <header className="masthead">
@@ -18,22 +38,14 @@ export class App extends Component {
         </header>
         <div className="content-container">
           <main className="main">
-            <div className="dropzone">
-              <img src="https://media.giphy.com/media/13p77tfexyLtx6/giphy.gif" />
-            </div>
-            <div className="dropzone">
-              <img src="https://media.giphy.com/media/iLqpYAbKGOrqU/giphy.gif" />
-            </div>
-            <div className="dropzone">
-              <img src="https://media.giphy.com/media/8ytDUrlW9JbG0/giphy.gif" />
-            </div>
-            <div className="dropzone">
-              <img src="https://media.giphy.com/media/PekRU0CYIpXS8/giphy.gif" />
-            </div>
+            <GifDropzone src="https://media.giphy.com/media/13p77tfexyLtx6/giphy.gif"/>
+            <GifDropzone src="https://media.giphy.com/media/iLqpYAbKGOrqU/giphy.gif"/>
+            <GifDropzone src="https://media.giphy.com/media/8ytDUrlW9JbG0/giphy.gif"/>
+            <GifDropzone src="https://media.giphy.com/media/PekRU0CYIpXS8/giphy.gif"/>
           </main>
           <aside className="sidebar">
             <input className="search-input" name="search" placeholder="Search" />
-            { results.map((r) => <div className="search-result" key={r.label}>{r.label}</div>) }
+            { resultSwatches }
           </aside>
         </div>
         <footer className="footer">
