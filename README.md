@@ -7,7 +7,7 @@ Welcome! This challenge is designed to give us a better idea of how you work
 on a front-end project. We've found project-based challenges like this
 to be a more effective means of evaluation than traditional coding interviews.
 
-You should *expect to spend 2-3 hours on this challenge*.
+You should **expect to spend 2-3 hours on this challenge**.
 
 ## The Challenge
 
