@@ -1,5 +1,5 @@
 {
-  "name": "expedite-front-end-challenge",
+  "name": "expedite-challenge-front-end",
   "version": "0.0.0",
   "description": "Proving grounds for wandering front-end warriors.",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/expedite/expedite-front-end-challenge.git"
+    "url": "https://github.com/expedite/expedite-challenge-front-end.git"
   },
   "author": "expedite",
   "homepage": "http://challenge.expeditelabs.com",
