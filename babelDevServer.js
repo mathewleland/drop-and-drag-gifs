@@ -1,5 +1,5 @@
 // Run the dev server with babel preprocessing so we can use ES6/7
-require('babel/register')({
+require('babel-core/register')({
   stage: 0
 });
 
