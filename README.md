@@ -19,7 +19,7 @@ employees to collect and share multiple GIFs at once.
 It's like... Pinterest for GIFs? Manga Studio for GIFs? Well.. you get the idea.
 
 Your quest is to complete all of the **Basic Requirements** and
-your choice of 2 quick **Bugfixes** from the sections below.
+your choice of 2 quick **Bugfixes**.
 
 We've provided a basic framework to get you started, but many things are
 intentionally incomplete or broken. We encourage you to change
@@ -32,22 +32,22 @@ Best of luck!
 
 ### Bugfixes (choose 2)
 
-We recommend doing these first to get a feel for the codebase.
+We recommend doing some of these first to get a feel for the codebase.
 
-- Search results shouldn't hang over the right edge of the sidebar
+- Sidebar search results shouldn't hang over the right edge of the sidebar
 - There should be some padding between footer text and main content
 - Header should look nicer.
   - Logo should be vertically centered with main heading.
   - Remove weird gaps above and below header
   - Cleaner styling on header text.
-- Dropzones should look nicer:
+- GifDropzones should look nicer:
   - image should stretch to fit the frame
   - should be arranged in a 2x2 grid, 200px row height.
 - Sidebar and main column should always be equal height
 
 ### Basic Requirements
 
-- Refator the `App` component into multiple components, as desired
+- Refactor the `App` component into multiple components, as you see fit.
 - Hook search up to the [Giphy API](https://github.com/giphy/GiphyAPI)
   - Use their public beta key
   - Should efficiently make search requests as you type.
@@ -57,22 +57,12 @@ We recommend doing these first to get a feel for the codebase.
   the corresponding GIF.
   - Note: Basic drag'n'drop is already set up with [react-dnd](http://gaearon.github.io/react-dnd/docs-overview.html) you just need to hook it up to your own data model.
 
-### Bonus Features (optional)
+### Bonus (optional)
 
-Got some extra time? Wanna really wow us? Here are some ideas...
-
-- Synchronize the state of the dropzones in one tab with those in another tab
-- Devise a second colorscheme (toggle-able with a class on `body`)
-- Add some cool animations to drag/drop/search interactions
-- Implement the [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) with a fun surprise
-- Make the design responsive down to 480px
-  - Dropzones should collapse back into a single column at some point
-  - Ensure footer/header contents look reasonable on small screens
-  - Decide how to present search and GIF selection features at phone size.
-- Update the URL with a shareable url that initializes the same dropzone states
-- Allow user to add text overlays to GIF panels.
-- Allow user to add rows and/or columns
-- Anything else you'd like to do?
+Got a little extra time? Add a personal touch. Maybe you have an idea for a
+cool easter egg? Or maybe you want to improve the colorscheme?
+Maybe that repeating logo background really bothers you for some reason.
+You can do anything you like!
 
 ## Installing
 
@@ -92,10 +82,7 @@ When you are satisfied with your work, follow these instructions to submit:
 1. `git format-patch master your-branch-name --stdout > your-name.patch`.
     Or, if you worked straight off of master, use the commit sha preceding
     your work and the commit sha for your final commit.
-2. Email the patch to [recruiting+front-end-challenge@expeditelabs.com](mailto:recruiting+front-end-challenge@expeditelabs.com).
-
-_We use email instead of a PR because we don't want your submission to be
-publicly available to other candidates._
+2. Email the patch to [recruiting+challenge-front-end@expeditelabs.com](mailto:recruiting+challenge-front-end@expeditelabs.com).
 
 ## Feedback
 

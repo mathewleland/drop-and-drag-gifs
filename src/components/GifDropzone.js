@@ -2,6 +2,8 @@ import React, {Component, PropTypes} from 'react';
 import DraggableTypes from '../constants/DraggableTypes';
 import {DropTarget} from 'react-dnd';
 
+import './GifDropzone.scss';
+
 // Decorate component with DropTarget functionality
 // See react-dnd docs: http://gaearon.github.io/react-dnd/docs-overview.html
 @DropTarget(DraggableTypes.GIF, { // implement DropTarget interface
@@ -38,7 +40,7 @@ export default class GifDropzone extends Component {
       backgroundColor: 'rgba(255, 255, 255, .5)',
     };
     return connectDropTarget(
-      <div style={{ position: 'relative' }} >
+      <div className="GifDropzone" style={{ position: 'relative' }} >
         <div style={isOver && canDrop ? overlayStyles : { display: 'none'}}></div>
         { src ? <img src={src} /> : null }
       </div>

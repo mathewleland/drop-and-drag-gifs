@@ -22,7 +22,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loaders: ['babel?stage=0&optional=runtime'],
+        loaders: ['babel'], // see .babelrc for config
         include: path.join(__dirname, 'src')
       },
       { test: /\.json$/, loader: 'json-loader' },
