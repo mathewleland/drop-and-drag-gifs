@@ -72,9 +72,9 @@ Best of luck!
 
 When you are satisfied with your work, follow these instructions to submit:
 
-1. `git format-patch master your-branch-name --stdout > your-name.patch`.
+1. `git format-patch master --stdout > your-name.patch`.
     Or, if you worked straight off of master, use the commit sha preceding
-    your work and the commit sha for your final commit.
+    your work.
 2. Email the patch to [recruiting+challenge-front-end@expeditelabs.com](mailto:recruiting+challenge-front-end@expeditelabs.com).
 
 ## Feedback
