@@ -32,7 +32,8 @@ export class App extends Component {
           <h1>
             <a href="/">
               <img src={logoUrl} height={36} />
-              <span>Expedite Gifs</span>
+              &nbsp;
+              <span>Gifs</span>
             </a>
           </h1>
         </header>
@@ -49,11 +50,9 @@ export class App extends Component {
           </aside>
         </div>
         <footer className="footer">
-          {<a href={urls.expediteHomepage} target="_blank">About Expedite</a>}
+          {<a href={urls.claraHomepage} target="_blank">About Clara</a>}
           {' | '}
-          {<a href={urls.expediteCareers} target="_blank">Work at Expedite</a>}
-          {' | '}
-          {<a href={urls.expediteChallenge} target="_blank">The Expedite challenge</a>}
+          {<a href={urls.claraCareers} target="_blank">Work at Clara</a>}
         </footer>
       </div>
     );

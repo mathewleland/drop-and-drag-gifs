@@ -1,4 +1,4 @@
-Expedite Front-end Challenge
+Clara Front-end Challenge
 ============================
 
 ## Intro
@@ -11,7 +11,7 @@ You should **expect to spend 2 hours on this challenge**.
 
 ## The Challenge
 
-At Expedite, we've decided to build some internal "portals" that make our
+At Clara, we've decided to build some internal "portals" that make our
 mortgage staff more effective. Lately, we realized that GIFs shared per hour
 is really the most important metric so we've decided to build an internal portal
 for sharing GIF collections! It's like... Pinterest for GIFs?
@@ -66,11 +66,11 @@ When you are satisfied with your work, follow these instructions to submit:
 1. `git format-patch master --stdout > your-name.patch`.
     Or, if you worked straight off of master, use the commit sha preceding
     your work.
-2. Email the patch to [recruiting+challenge-front-end@expeditelabs.com](mailto:recruiting+challenge-front-end@expeditelabs.com).
+2. Email the patch to [recruiting+challenge-front-end@clara.com](mailto:recruiting+challenge-front-end@clara.com).
 
 ## Feedback
 
-We're always looking for ways to improve our processes at Expedite so
+We're always looking for ways to improve our processes at Clara so
 let us know if anything is especially frustrating (or fun)!
 
 ## Attributions

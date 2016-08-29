@@ -1,6 +1,5 @@
 const urls = {
-  expediteHomepage: '//expeditefinancial.com',
-  expediteCareers: '//expeditefinancial.com/jobs',
-  expediteChallenge: '//challenge.expeditelabs.com'
+  claraHomepage: '//clara.com',
+  claraCareers: '//clara.com/careers',
 }
 export default urls;

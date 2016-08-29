@@ -1,5 +1,5 @@
 {
-  "name": "expedite-challenge-front-end",
+  "name": "challenge-front-end",
   "version": "0.0.0",
   "description": "Proving grounds for wandering front-end warriors.",
   "scripts": {
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/expedite/expedite-challenge-front-end.git"
+    "url": "https://github.com/expedite/challenge-front-end.git"
   },
-  "author": "expedite",
-  "homepage": "http://challenge.expeditelabs.com",
+  "author": "clara",
+  "homepage": "https://clara.com/careers",
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
     "autoprefixer-loader": "^3.2.0",
