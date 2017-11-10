@@ -1,3 +1,26 @@
 .GifDropzone {
-  border: 3px solid #333;
+  border: 0px solid #333;
+  border-radius: 100px;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  object-fit: contain;
+  background: radial-gradient(gray, white);
+  // position: relative;
+  // margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    opacity: 50%;
+    // position: absolute;
+    // left: 50%;
+    // top: 50%;
+  }
+
+  img {
+    height: 100%;
+    width: 150%;
+  }
 }
