@@ -10,6 +10,10 @@ import './GifDropzone.scss';
   drop(props, monitor, component) {
     const item = monitor.getItem();
     console.log('Dropped', item);
+    console.log(item.playingUrl);
+    console.log(component);
+    component.setState({ imgSrc: item.playingUrl });
+    // component.setState({ imgSrc: props.playingUrl })
     // TODO update state so the dropped gif is displayed here
     // Hint: you have access to props (like maybe callbacks?) passed in from above
   }
@@ -21,8 +25,16 @@ import './GifDropzone.scss';
   };
 })
 export default class GifDropzone extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      imgSrc: false
+    }
+  }
   static propTypes = {
     src: PropTypes.string,
+    playingUrl: PropTypes.string,
     // Injected by React DnD:
     connectDropTarget: PropTypes.func.isRequired,
     isOver: PropTypes.bool.isRequired,
@@ -39,10 +51,14 @@ export default class GifDropzone extends Component {
       left: 0,
       backgroundColor: 'rgba(255, 255, 255, .5)',
     };
+    let dropMessage = this.props.canDrop && !this.state.imgSrc ? <h2>Drop here!</h2> : '';
+
     return connectDropTarget(
       <div className="GifDropzone" style={{ position: 'relative' }} >
+
         <div style={isOver && canDrop ? overlayStyles : { display: 'none'}}></div>
-        { src ? <img src={src} /> : null }
+        { this.state.imgSrc ? <img src={this.state.imgSrc} /> : null  }
+        {dropMessage}
       </div>
     );
   }
