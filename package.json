@@ -1,7 +1,7 @@
 {
-  "name": "challenge-front-end",
+  "name": "DnDGifs",
   "version": "0.0.0",
-  "description": "Proving grounds for wandering front-end warriors.",
+  "description": "Playing around with React Drag and drop.",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/expedite/challenge-front-end.git"
+    "url": "https://github.com/mathewleland/drop-and-drag-gifs.git"
   },
-  "author": "clara",
-  "homepage": "https://clara.com/careers",
+  "author": "Mathew Leland",
+  "homepage": "mhleland.com",
   "devDependencies": {
     "autoprefixer-core": "^6.0.1",
     "autoprefixer-loader": "^3.2.0",
@@ -39,6 +39,7 @@
     "webpack-hot-middleware": "^2.0.0"
   },
   "dependencies": {
+    "axios": "^0.17.0",
     "babel-runtime": "^5.8.24",
     "normalize.css": "^3.0.3",
     "react": "0.14.2",
