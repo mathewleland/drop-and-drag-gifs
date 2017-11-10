@@ -7,7 +7,7 @@ import DraggableTypes from '../constants/DraggableTypes';
 @DragSource(DraggableTypes.GIF, { // implement DragSource interface
   beginDrag(props, monitor, component) {
     // return data that identifies this draggable
-    const item = { id: props.id };
+    const item = { id: props.id, playingUrl: props.playingUrl };
     console.log('Dragging', item);
     return item;
   }
@@ -18,6 +18,16 @@ import DraggableTypes from '../constants/DraggableTypes';
   };
 })
 export default class GifSwatch extends Component {
+
+  constructor() {
+    super()
+
+    this.state = {
+      hover: false
+    }
+
+    this.changeHover = this.changeHover.bind(this);
+  }
   static propTypes = {
     thumbnailUrl: PropTypes.string.isRequired,
     // Injected by React DnD:
@@ -25,9 +35,13 @@ export default class GifSwatch extends Component {
     isDragging: PropTypes.bool.isRequired
   };
 
+  changeHover(bool) {
+    this.setState({ hover: bool})
+  }
+
   // TODO run GIF on hover
   render() {
-    const { isDragging, connectDragSource, thumbnailUrl } = this.props;
+    const { isDragging, connectDragSource, thumbnailUrl, previewUrl } = this.props;
 
     const draggingStyles = {
       opacity: .5,
@@ -36,17 +50,21 @@ export default class GifSwatch extends Component {
     };
 
     const styles = {
-      padding: 12,
+      padding: 5,
       width: '100%',
-      background: '#333',
+      background: 'black',
       ...(isDragging ? draggingStyles : {})
     }
 
+    let imageSrc = this.state.hover ? this.props.previewUrl : this.props.thumbnailUrl;
+
     return connectDragSource(
-      <div style={styles}>
+      <div className='gifswatch' style={styles}>
         <img
-          src={ thumbnailUrl }
+          src={ imageSrc }
           style={{width: '100%'}}
+          onMouseEnter={() => this.changeHover(true)}
+          onMouseLeave={() => this.changeHover(false)}
         />
       </div>
     );
